@@ -6,8 +6,9 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--color-bg);
   font-size: 1rem;
+  font-weight: 400;
+  background-color: var(--color-bg);
 }
 
 header {
@@ -19,6 +20,7 @@ header {
 
 h1 {
   font-size: 5rem;
+  font-weight: 900;
   color: var(--color-text);
 }
 
@@ -33,7 +35,7 @@ h1.city__title {
 
 .container {
   margin: 0 auto;
-  width: 980px;
+  width: 920px;
 }
 
 nav {
@@ -44,12 +46,25 @@ nav {
 .nav__list {
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid #dfdfdf;
   display: inline-flex;
+  flex-wrap: wrap;
   list-style: none;
   position: relative;
   --underline-width: 0;
   --underline-offset-x: 0;
+}
+
+.nav__list li:first-child::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  border-bottom: 1px solid #dfdfdf;
+  width: 115%;
+  margin-left: -7.5%;
+  z-index: -5;
 }
 
 .nav__link {
