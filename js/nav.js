@@ -1,9 +1,11 @@
 import { fetchNavData } from './fetchNavData.js'; // Adjust the path as necessary
 
 // Fetch and create the navigation bar
-fetchNavData().then((data) => {
-  if (data) createNavBar(data);
-});
+const init = async () => {
+  const cities = await fetchNavData();
+  createNavBar(cities);
+};
+init();
 
 // Variable to hold the currently active link
 let activeLink = null;
