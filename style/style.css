@@ -18,11 +18,24 @@ header {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   color: var(--color-text);
 }
 
-nav.main {
+h1.city__title {
+  margin-bottom: 1rem;
+}
+
+.city__time {
+  margin-left: 0.5rem;
+}
+
+.container {
+  margin: 0 auto;
+  width: 980px;
+}
+
+nav {
   display: flex;
   justify-content: center;
 }
@@ -42,7 +55,6 @@ nav.main {
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
   color: var(--color-nav);
-  /* margin: 0 1.7rem 0; */
   padding: 1rem 1.7rem 0.5rem;
   display: block;
   text-decoration: none;

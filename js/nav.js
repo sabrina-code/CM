@@ -4,6 +4,10 @@ import { fetchNavData } from './fetchNavData.js'; // Adjust the path as necessar
 const init = async () => {
   const cities = await fetchNavData();
   createNavBar(cities);
+  // Set default display city
+  if (cities.length > 0) {
+    displayCityContent(cities[0].label);
+  }
 };
 init();
 
@@ -28,11 +32,24 @@ const createNavBar = (cities) => {
     li.appendChild(a);
     cityList.appendChild(li);
 
+    // onclick listener for each city link
+    a.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent default anchor behavior
+      setActiveLink(a);
+      displayCityContent(city.label); // Call to display city name
+    });
+
     // Default the first item as active
     if (index === 0) setActiveLink(a);
   });
 
   linkListeners();
+};
+
+// Display City name after onclick event
+const displayCityContent = (cityName) => {
+  const contentDiv = document.querySelector('.city__title');
+  contentDiv.textContent = `${cityName}`;
 };
 
 // shrink underline to fit in the width of the text
