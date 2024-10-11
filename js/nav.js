@@ -1,3 +1,10 @@
+import { fetchNavData } from './fetchNavData.js'; // Adjust the path as necessary
+
+// Fetch and create the navigation bar
+fetchNavData().then((data) => {
+  if (data) createNavBar(data);
+});
+
 // Variable to hold the currently active link
 let activeLink = null;
 
@@ -66,9 +73,3 @@ const linkListeners = () => {
     });
   });
 };
-
-// Fetch the navigation.json file
-fetch('data/navigation.json')
-  .then((response) => response.json())
-  .then((data) => createNavBar(data.cities))
-  .catch((error) => console.error('Error fetching the JSON:', error));
