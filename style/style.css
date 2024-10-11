@@ -23,11 +23,12 @@ h1 {
 }
 
 h1.city__title {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .city__time {
   margin-left: 0.5rem;
+  font-size: 1rem;
 }
 
 .container {
