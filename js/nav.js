@@ -50,11 +50,6 @@ nav.addEventListener('mouseover', (event) => {
   }
 });
 
-// Remove this event listener
-// nav.addEventListener('mouseleave', () => {
-//   nav.style.setProperty('--underline-width', '0');
-// });
-
 // Add active class to a link onclick
 links.forEach((element) => {
   element.addEventListener('click', () => {
