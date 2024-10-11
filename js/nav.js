@@ -75,20 +75,9 @@ const setActiveLink = (link) => {
 
 // mouse action event listener
 const linkListeners = () => {
-  const nav = document.querySelector('.nav__list');
   const links = document.querySelectorAll('.nav__link');
-
-  nav.addEventListener('mouseover', (event) => {
-    const link = event.target.closest('.nav__link');
-    if (link && !link.classList.contains('active')) updateUnderline(link);
-  });
 
   links.forEach((element) => {
     element.addEventListener('click', () => setActiveLink(element));
-
-    // revert to previous active item if condition met
-    element.addEventListener('mouseleave', () => {
-      if (activeLink) updateUnderline(activeLink);
-    });
   });
 };
