@@ -1,6 +1,6 @@
 # CM Navigation
 
-Simple navigation with local time display for cities
+A simple navigation that displays the local time for different cities when clicked.
 
 ## Technology used
 
