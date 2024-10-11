@@ -4,9 +4,9 @@ A simple navigation that displays the local time for different cities when click
 
 ## Technology used
 
-HTML5
-CSS3
-JavasCript
+- HTML5
+- CSS3
+- JavaScript
 
 ### Footnote
 
