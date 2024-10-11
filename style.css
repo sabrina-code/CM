@@ -26,6 +26,7 @@ nav.main {
   display: flex;
   justify-content: center;
 }
+
 .nav__list {
   margin: 1rem 0 0.5rem;
   padding: 0;
@@ -61,5 +62,19 @@ nav.main {
 }
 
 .nav__link:hover {
+  color: #4f86c0;
   cursor: pointer;
+}
+
+.nav__link.active {
+  color: #000;
+}
+
+.nav__link.active::after {
+  content: '';
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: var(--underline-offset-x);
+  width: var(--underline-width);
 }
